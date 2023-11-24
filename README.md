@@ -83,6 +83,9 @@ El proyecto cuenta con un pipeline de CI/CD que se ejecuta en cada push al repos
 
 Tambien puedes tener stages personalizados para cada desarrollador.
 
+## Conventional Commits
+
+Se sugiere utilizar [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) para los mensajes de commit. Esto permite que los desarrolladores puedan generar automáticamente el changelog del proyecto, y facilita la comunicación entre los miembros del equipo.
 
 ## Recursos adicionales
 
