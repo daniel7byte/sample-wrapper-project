@@ -8,6 +8,7 @@ export const handler = ApiHandler(async (evt, ctx) => {
   const queryParams = useQueryParams();
 
   const querySchema = Joi.object({
+    q: Joi.string().optional(),
     limit: Joi.number().integer().min(0).max(100), // .max(100).required(),
     skip: Joi.number().integer().min(0), //.required(),
     select: Joi.string().optional(),
@@ -20,6 +21,7 @@ export const handler = ApiHandler(async (evt, ctx) => {
   }
 
   const res = await ProductRepository.getAll({
+    q: value.q,
     limit: value.limit,
     skip: value.skip,
     select: value.select,

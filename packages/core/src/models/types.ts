@@ -13,6 +13,7 @@ export type ProductType = {
 }
 
 export type ProductQueryParams = {
+  q?: string;
   limit?: number;
   skip?: number;
   select?: string;
