@@ -1,14 +1,15 @@
 import { SSTConfig } from "sst";
-import { API } from "./stacks/MyStack";
+import { ApiStack } from "./stacks/ApiStack";
 
 export default {
-  config(_input) {
+  config (_input) {
     return {
       name: "sample-wrapper-project",
       region: "us-east-1",
     };
   },
-  stacks(app) {
-    app.stack(API);
+  stacks (app) {
+    // Add stacks here
+    app.stack(ApiStack);
   }
 } satisfies SSTConfig;
